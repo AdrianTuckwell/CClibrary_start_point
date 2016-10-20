@@ -1,0 +1,10 @@
+<h2><%= @member.name %></h2>
+
+<h3>Address: <%= @member.address %></h3>
+
+<h3>Books issued</h3>
+<br>
+<% @member.books.each do |book| %>
+    <a href="/books/ <%= book.id %> "></a> <%= book.title %> by: <%= book.author %>
+    <br>
+<% end %>

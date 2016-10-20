@@ -1,0 +1,25 @@
+<h2> New rental:</h2>
+
+<form action="/rentals" method="post">
+
+  <!-- Book select list -->
+  <label for="book_id">Book:</label>
+  <select name="book_id" id="book_id">
+    <% @books.each do |book| %>
+      <option value="<%= book.id %>"><%= book.title %></option>
+    <% end %>
+  </select>
+  <br>  
+  <br>  
+
+  <!-- Member select list -->
+  <label for="member_id">Member:</label>
+  <select name="member_id" id="member_id">
+    <% @members.each do |member| %>
+      <option value="<%= member.id %>"><%= member.name %></option>
+    <% end %>
+  </select>
+  <br>
+  <br>
+  <input type="submit" value="Issue book!"></input>
+</form>
